@@ -46,4 +46,13 @@ else
     echo "kilocode not found, skipping."
 fi
 
+# 6. Codex
+if command -v codex &> /dev/null; then
+    echo "Updating Codex..."
+    # Since codex is part of the brv-managed npm prefix, we use npm
+    npm install -g @openai/codex@latest
+else
+    echo "codex not found, skipping."
+fi
+
 echo "All updates completed!"

@@ -55,4 +55,12 @@ else
     echo "codex not found, skipping."
 fi
 
+# 7. Grok CLI
+if command -v grok &> /dev/null; then
+    echo "Updating Grok CLI..."
+    grok update
+else
+    echo "grok not found, skipping."
+fi
+
 echo "All updates completed!"

@@ -63,4 +63,12 @@ else
     echo "grok not found, skipping."
 fi
 
+# 8. MiMo Code
+if command -v mimo &> /dev/null; then
+    echo "Updating MiMo Code..."
+    mimo upgrade
+else
+    echo "mimo not found, skipping."
+fi
+
 echo "All updates completed!"
